@@ -11,14 +11,20 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             int szamA, szamB;
-            Console.WriteLine("Írj be egy számot!");
-            szamA = int.Parse(Console.ReadLine());
-            Console.WriteLine("Írj be egy másik számot!");
-            szamB = int.Parse(Console.ReadLine());
+            szamA = szamotKer("Írj be egy számot");
+            szamB = szamotKer("Írj be egy számot");
             Console.WriteLine("A szám összege:" +(szamA+szamB).ToString());
 
 
             Console.ReadLine();
+        }
+
+        private static int szamotKer(string szoveg)
+        {
+            int bekertszam;
+            Console.Write(szoveg);
+            bekertszam = int.Parse(Console.ReadLine());
+            return bekertszam;
         }
     }
 }
